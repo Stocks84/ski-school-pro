@@ -1,0 +1,29 @@
+<!-- templates/booking/lesson_list.html -->
+
+{% extends 'booking/base.html' %}
+
+{% block title %}Lesson List{% endblock %}
+
+{% block content %}
+    <h2>Lesson List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Lesson Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lesson in lessons %}
+                <tr>
+                    <td>{{ lesson.name }}</td>
+                    <td>{{ lesson.date }}</td>
+                    <td>{{ lesson.time }}</td>
+                    <td>{{ lesson.instructor }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
