@@ -8,7 +8,7 @@
     <h2>Instructor List</h2>
     <ul>
         {% for instructor in instructors %}
-            <li>{{ instructor }}</li>
+            <li>{{ instructor }} : {{ instructor.bio }} </li>
         {% endfor %}
     </ul>
 {% endblock %}
