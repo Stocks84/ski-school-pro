@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Lesson, Instructor, Booking
 from .forms import BookingForm
+from .forms import UserRegistrationForm
 
 # Create your views here.
 
@@ -28,4 +30,17 @@ def book_lesson(request):
     else:
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form})
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Congratulations your Registration was a success! You can now log in.')
+            return redirect('home')  # Redirect to home page after successful registration
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'booking/registration_form.html', {'form': form})
+
 
