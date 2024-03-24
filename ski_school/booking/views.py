@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import Lesson, Instructor, Booking
 from .forms import BookingForm
 from .forms import UserRegistrationForm
@@ -57,6 +57,11 @@ def user_login(request):
         else:
             messages.error(request, 'Invalid username or password.')
     return render(request, 'booking/login_form.html')
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')
 
 
 
