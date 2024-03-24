@@ -20,7 +20,10 @@
             <li><a href="{% url 'instructor_list' %}">Instructors</a></li>
             <li><a href="{% url 'book_lesson' %}">Booking Form</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'user_login' %}">Login</a></li>
             {% endif %}
             <!-- Add other navigation links here -->
         </ul>
