@@ -1,4 +1,4 @@
-<!-- templates/booking/base.html -->
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,45 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Ski School{% endblock %}</title>
     <!-- Add your CSS links and other meta tags here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 
-<header>
-    <!-- Your header content goes here -->
-    <h1>Welcome to Our Ski School</h1>
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'lesson_list' %}">Lessons</a></li>
-            <li><a href="{% url 'instructor_list' %}">Instructors</a></li>
-            <li><a href="{% url 'book_lesson' %}">Booking Form</a></li>
-            {% if user.is_authenticated %}
-            <li><span>Logged in as {{ user.username }}</span></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'user_login' %}">Login</a></li>
-            {% endif %}
-            <!-- Add other navigation links here -->
-        </ul>
-    </nav>
-</header>
+<div class="wrapper">
+    <header>
+        <!-- Your header content goes here -->
+        <h1>Welcome to Our Ski School</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">Ski School</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'lesson_list' %}">Lessons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'instructor_list' %}">Instructors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'book_lesson' %}">Booking Form</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <span class="nav-link">Logged in as {{ user.username }}</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'register' %}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
 
-<main>
+<main class="container mt-4">
     {% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-    {% endfor %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
     {% endif %}
     {% block content %}
     <!-- Default content if not overridden in child templates -->
     {% endblock %}
 </main>
 
-<footer>
+<footer class="footer mt-auto py-3 bg-light text-center">
     <!-- Your footer content goes here -->
     <p>&copy; 2024 Ski School</p>
 </footer>
 
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'booking/js/script.js' %}"></script>
+
 </body>
 </html>
+

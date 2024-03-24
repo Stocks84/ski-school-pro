@@ -1,0 +1,19 @@
+/* Custom styles for the Ski School project */
+body {
+    background-color: #f2f7fd; /* light blue */
+    color: #000; /* black */
+}
+
+header {
+    background-color: #6c757d; /* grey */
+    color: #fff; /* white */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* white */
+}
+
+.footer {
+    background-color: #6c757d; /* grey */
+    color: #fff; /* white */
+}

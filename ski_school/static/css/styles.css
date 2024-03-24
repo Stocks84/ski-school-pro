@@ -1,0 +1,36 @@
+/* Custom styles for the Ski School project */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    background-color: #f2f7fd; /* light blue */
+    color: #000; /* black */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6c757d; /* grey */
+    color: #f2f7fd; /* white */
+}
+
+.navbar-nav .nav-link {
+    color: #005a8d; /* white */
+}
+
+.footer {
+    background-color: #6c757d; /* grey */
+    color: #005a8d; /* white */
+}
+/* CSS styles */
+
+main {
+    flex-grow: 1;
+}
