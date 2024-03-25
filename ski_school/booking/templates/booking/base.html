@@ -13,52 +13,52 @@
 </head>
 <body>
 
-<div class="wrapper">
-    <header>
-        <!-- Your header content goes here -->
-        <h1>Welcome to Our Ski School</h1>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">Ski School</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+<header>
+    <!-- Your header content goes here -->
+    <h1>Welcome to Our Ski School</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Ski School</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'lesson_list' %}">Lessons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'instructor_list' %}">Instructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'book_lesson' %}">Booking Form</a>
+                    </li>
+                    {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <span class="nav-link">Logged in as {{ user.username }}</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'lesson_list' %}">Lessons</a>
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'instructor_list' %}">Instructors</a>
+                            <a class="nav-link" href="{% url 'user_login' %}">Login</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'book_lesson' %}">Booking Form</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                            <li class="nav-item">
-                                <span class="nav-link">Logged in as {{ user.username }}</span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'register' %}">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'user_login' %}">Login</a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
+                    {% endif %}
+                </ul>
             </div>
-        </nav>
-    </header>
-</div>
+        </div>
+    </nav>
+</header>
+
+<div class="background-image"></div>
 
 <main class="container mt-4">
     {% if messages %}
@@ -84,4 +84,3 @@
 
 </body>
 </html>
-

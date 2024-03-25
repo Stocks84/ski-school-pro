@@ -19,8 +19,8 @@ header {
 }
 
 .background-image {
-    background-image: url('/static/images/Mountain.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
-    background-size: cover; /* Adjust the size of the background image */
+    background-image: url('/ski_school/static/images/Mountain.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: contain; /* Adjust the size of the background image */
     background-repeat: no-repeat;
     background-position: center;
     height: 300px; /* Adjust the height as needed */
@@ -46,4 +46,5 @@ header {
 
 main {
     flex: 1; /* Take remaining space */
+    padding: 20px; /* Add padding */
 }
