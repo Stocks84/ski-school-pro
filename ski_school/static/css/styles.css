@@ -1,4 +1,6 @@
 /* Custom styles for the Ski School project */
+
+/* base.html */
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -6,44 +8,84 @@
 }
 
 body {
-    background-color: #f2f7fd; /* light blue */
-    color: #000; /* black */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #f2f7fd; 
+    color: #000; 
+    margin: 0; 
+    padding: 0; 
 }
 
 header {
-    background-color: #6c757d; /* grey */
-    color: #f2f7fd; /* white */
-    padding: 10px 0; /* Add padding to top and bottom */
+    background-color: #6c757d; 
+    color: #f2f7fd; 
+    padding: 10px 0; 
 }
 
 .background-image {
-    background-image: url('/static/images/Mountain.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
-    background-size: cover; /* Adjust the size of the background image */
+    background-image: url('/static/images/Mountain.jpg');
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
-    height: 300px; /* Adjust the height as needed */
+    height: 300px;
 }
 
 
 .navbar-nav .nav-link {
-    color: #005a8d; /* blue */
+    color: #005a8d;
 }
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
 
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f8f9fa; /* Change this to your desired background color */
-    color: #000; /* Change this to your desired text color */
+    background-color: #f8f9fa;
+    color: #000;
     text-align: center;
-    padding: 10px; /* Adjust as needed */
-    z-index: 1000; /* Adjust as needed */
+    padding: 10px;
+    z-index: 1000;
 }
 
 
 main {
     flex: 1; /* Take remaining space */
 }
+
+/* lesson_list.html */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Center the table horizontally */
+table {
+    margin: 0 auto;
+}
+
+/* Add border, shadow, and rounded edges to the table */
+table {
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Style table headers */
+th {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    background-color: #f2f2f2;
+    padding: 12px 16px;
+}
+
+/* Style table cells */
+td {
+    text-align: center;
+}
+
