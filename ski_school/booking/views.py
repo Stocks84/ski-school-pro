@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Lesson, Instructor, Booking
-from .forms import BookingForm, UserRegistrationForm
+from .forms import BookingForm, UserRegistrationForm, LessonForm
 
 # Create your views here.
 
@@ -22,16 +22,23 @@ def instructor_list(request):
     return render(request, 'booking/instructor_list.html', {'instructors': instructors})
 
 @login_required
-def book_lesson(request):
+def book_lesson(request, lesson_id=None):
+    lesson = None
+    if lesson_id:
+        lesson = get_object_or_404(Lesson, pk=lesson_id)
+
     if request.method == 'POST':
-        form = BookingForm(request.POST)
+        form = BookingForm(request.POST, instance=lesson)
         if form.is_valid():
-            form.save()
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
             messages.success(request, 'Your lesson has been booked successfully!')
             return redirect('home')  # Redirect to a success page
     else:
-        form = BookingForm()
+        form = BookingForm(instance=lesson)
     return render(request, 'booking/booking_form.html', {'form': form})
+
 
 def register(request):
     if request.method == 'POST':
@@ -61,6 +68,4 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
-
-
 

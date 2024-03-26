@@ -76,6 +76,39 @@ main {
     color: #708090;
 }
 
+/* styles.css */
+
+/* Search button */
+.btn-outline-success {
+    color:  #005a8d;
+    border-color:  #005a8d;
+}
+
+.btn-outline-success:hover {
+    background-color: #005a8d;
+    color: #fff;
+}
+
+/* Dropdown menu */
+.form-select {
+    border-color:  #005a8d;
+    color:  #005a8d;
+}
+
+/* Dropdown menu arrow color */
+.form-select:active {
+    border-color:  #005a8d;
+    color:  #005a8d;
+}
+
+/* Dropdown menu hover effect */
+.form-select:hover {
+    background-color: #f8f9fa;
+    color:  #005a8d;
+}
+
+
+
 
 
 

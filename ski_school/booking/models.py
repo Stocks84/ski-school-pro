@@ -11,7 +11,9 @@ class Instructor(models.Model):
     def __str__(self):
         return self.user.username
 
+
 class Lesson(models.Model):
+    id = models.AutoField(primary_key=True)
     instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
@@ -20,6 +22,7 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f"{self.instructor} - {self.date} {self.time}"
+
 
 class Booking(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
