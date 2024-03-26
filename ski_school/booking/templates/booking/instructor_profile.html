@@ -1,4 +1,4 @@
-<!-- templates/booking/instructor_profile.html -->
+<!-- instructor_profile.html -->
 
 {% extends 'booking/base.html' %}
 
@@ -11,4 +11,19 @@
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
+    <form action="{% url 'delete_instructor_profile' %}" method="post" id="delete-form">
+        {% csrf_token %}
+        <button type="submit" onclick="return confirmDelete()">Delete Profile</button>
+    </form>
 {% endblock %}
+
+<script>
+    function confirmDelete() {
+        console.log("Confirm delete function called");
+        return confirm("Are you sure you want to delete your bio?");
+    }
+</script>
+
+
+
+

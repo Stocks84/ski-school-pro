@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from .models import Lesson, Instructor, Booking
 from .forms import BookingForm, UserRegistrationForm, LessonForm, InstructorForm
+
+
 
 # Create your views here.
 
@@ -71,7 +75,13 @@ def user_logout(request):
 
 @login_required
 def instructor_profile(request):
-    instructor = Instructor.objects.get_or_create(user=request.user)[0]
+    # Check if the logged-in user is a ski instructor
+    try:
+        instructor = Instructor.objects.get(user=request.user)
+    except Instructor.DoesNotExist:
+        messages.error(request, 'SORRY YOU ARE NOT A INSTRUCTOR. PLEASE BOOK A LESSON')
+        return redirect('home')
+
     if request.method == 'POST':
         form = InstructorForm(request.POST, instance=instructor)
         if form.is_valid():
@@ -80,5 +90,20 @@ def instructor_profile(request):
             return redirect('instructor_profile')
     else:
         form = InstructorForm(instance=instructor)
+
     return render(request, 'booking/instructor_profile.html', {'form': form})
 
+@login_required
+def delete_instructor_profile(request):
+    # Check if the logged-in user is a ski instructor
+    try:
+        instructor = Instructor.objects.get(user=request.user)
+    except Instructor.DoesNotExist:
+        messages.error(request, 'You are not a ski instructor.')
+        return redirect('home')
+
+    if request.method == 'POST':
+        instructor.delete()
+        messages.success(request, 'Profile deleted successfully!')
+        return redirect('home')  # Redirect to home page after deletion
+    return render(request, 'booking/delete_instructor_profile.html')
