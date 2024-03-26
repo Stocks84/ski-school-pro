@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Lesson, Instructor, Booking
-from .forms import BookingForm, UserRegistrationForm, LessonForm
+from .forms import BookingForm, UserRegistrationForm, LessonForm, InstructorForm
 
 # Create your views here.
 
@@ -68,4 +68,17 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+@login_required
+def instructor_profile(request):
+    instructor = Instructor.objects.get_or_create(user=request.user)[0]
+    if request.method == 'POST':
+        form = InstructorForm(request.POST, instance=instructor)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully!')
+            return redirect('instructor_profile')
+    else:
+        form = InstructorForm(instance=instructor)
+    return render(request, 'booking/instructor_profile.html', {'form': form})
 

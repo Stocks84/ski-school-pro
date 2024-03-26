@@ -1,0 +1,14 @@
+<!-- templates/booking/instructor_profile.html -->
+
+{% extends 'booking/base.html' %}
+
+{% block title %}Instructor Profile{% endblock %}
+
+{% block content %}
+    <h2>Instructor Profile</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

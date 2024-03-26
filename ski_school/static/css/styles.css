@@ -47,33 +47,38 @@ main {
 
 /* footer & social icons */
 
+/* footer & social icons */
+
 .footer {
-    position: fixed;
+    position: fixed; /* Fixed position to keep the footer at the bottom of the viewport */
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #f8f9fa;
     color: #000;
     text-align: center;
-    padding: 150px;
-    margin-bottom: 20px;
+    padding: 20px 0; /* Adjust padding for better spacing */
     z-index: 1000;
-    height: 143px;
 }
 
 .social-icons {
+    margin-top: 20px; /* Add some space between the footer text and social icons */
     text-align: center;
 }
 
-.social-icons > li {
-    display: inline;
+.social-icons li {
+    display: inline-block; /* Display social icons inline */
+    margin: 0 10px; /* Adjust spacing between social icons */
 }
 
 .social-icons i {
-    font-size: 150%;
-    margin: 2%;
-    padding: 2px;
+    font-size: 24px; /* Increase the size of social icons */
     color: #708090;
+    transition: color 0.3s ease; /* Add smooth transition effect */
+}
+
+.social-icons i:hover {
+    color: #005a8d; /* Change color on hover for better interactivity */
 }
 
 /* styles.css */
