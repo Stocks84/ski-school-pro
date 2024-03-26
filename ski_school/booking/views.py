@@ -27,7 +27,8 @@ def book_lesson(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('booking_success')  # Redirect to a success page
+            messages.success(request, 'Your lesson has been booked successfully!')
+            return redirect('home')  # Redirect to a success page
     else:
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form})
