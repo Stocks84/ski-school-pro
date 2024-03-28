@@ -1,1 +1,1 @@
-web: gunicorn ski_school.wsgi
+web: gunicorn ski-school-pro.wsgi
