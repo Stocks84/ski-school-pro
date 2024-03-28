@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-gghbi&-94mmg(6l+6qn6!(@rppc1_458m%e&s79(x&_8vr4s_+
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-stocks84-skischoolpro-u5399bv0eor.ws-eu110.gitpod.io',
 'ski-school-pro-2.herokuapp.com']
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ski-school-pro.wsgi.application'
+WSGI_APPLICATION = 'ski_school.wsgi.application'
 
 
 # Database
