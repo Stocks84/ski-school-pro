@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-gghbi&-94mmg(6l+6qn6!(@rppc1_458m%e&s79(x&_8vr4s_+
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-stocks84-skischoolpro-u5399bv0eor.ws-eu110.gitpod.io',
-'.herokuapp.com']
+'ski-school-pro-2.herokuapp.com']
 
 
 # Application definition
