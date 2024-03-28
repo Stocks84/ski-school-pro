@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ski_school.wsgi.application'
+WSGI_APPLICATION = 'ski-school-pro.wsgi.application'
 
 
 # Database
