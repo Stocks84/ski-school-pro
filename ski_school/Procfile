@@ -1,1 +1,1 @@
-web: gunicorn ski-school-pro.wsgi
+web: gunicorn ski-school-pro.wsgi --log-file -
