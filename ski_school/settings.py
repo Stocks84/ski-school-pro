@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-gghbi&-94mmg(6l+6qn6!(@rppc1_458m%e&s79(x&_8vr4s_+
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-stocks84-skischoolpro-u5399bv0eor.ws-eu110.gitpod.io',
 'ski-school-pro-2-4db020aae0bc.herokuapp.com']
