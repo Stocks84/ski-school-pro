@@ -19,9 +19,9 @@ def lesson_list(request):
     # Retrieve all lessons from the database
     lessons = Lesson.objects.all()
     # Pass the lessons to the template for rendering
-    return render(request, 'Failed to load resource: the server responded with a status of 404 ()lesson_list.html', {'lessons': lessons})
+    return render(request, 'booking/lesson_list.html', {'lessons': lessons})
 
-def instructor_list(request):
+def instructor_list(request): 
     instructors = Instructor.objects.all()  # Retrieve all instructors from the database
     return render(request, 'booking/instructor_list.html', {'instructors': instructors})
 
