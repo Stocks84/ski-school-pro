@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-gghbi&-94mmg(6l+6qn6!(@rppc1_458m%e&s79(x&_8vr4s_+
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-stocks84-skischoolpro-u5399bv0eor.ws-eu110.gitpod.io',
 'ski-school-pro-2-4db020aae0bc.herokuapp.com']
@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'cloudinary',
     'booking'
 ]
 
