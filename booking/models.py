@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 # booking/models.py
 
+
 class Instructor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
@@ -32,6 +33,3 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.student} - {self.lesson}"
-
-
-

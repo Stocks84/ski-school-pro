@@ -3,10 +3,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Booking, Lesson, Instructor
 
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['lesson', 'student']  
+        fields = ['lesson', 'student']
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -18,11 +19,11 @@ class UserRegistrationForm(UserCreationForm):
 class LessonForm(forms.ModelForm):
     class Meta:
         model = Lesson
-        fields = ['instructor', 'date', 'time', 'duration_hours', 'max_students']
+        fields = ['instructor', 'date', 'time', 'duration_hours',
+                  'max_students']
 
 
 class InstructorForm(forms.ModelForm):
     class Meta:
         model = Instructor
         fields = ['bio']
-

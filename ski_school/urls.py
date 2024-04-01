@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('booking.urls')),
 ]
 # urls.py (main project directory)
+return f"{self.student} - {self.lesson}"
 
