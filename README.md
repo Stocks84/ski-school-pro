@@ -1,39 +1,59 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [SKI SCHOOL PRO](https://ski-school-pro-2-4db020aae0bc.herokuapp.com)
 
-Welcome,
+The Ski School Pro (SKP) is a simple booking online project. It is based on a fictional small ski school that could be based anywhere in Europe! It is designed for instructors and customers alike. For the customers they can move around the site fluidly and see who the instructors are and book a ski lesson safely. For the instructors they can see which lessons they have, they also be able to alter their own bio’s. Please see the UX section for more details.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Stocks84/ski-school-pro)](https://github.com/Stocks84/ski-school-pro/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Stocks84/ski-school-pro)](https://github.com/Stocks84/ski-school-pro/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Stocks84/ski-school-pro)](https://github.com/Stocks84/ski-school-pro)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![screenshot](documentation/mockup.png)
 
-## Codeanywhere Reminders
+source: [amiresponsive](https://ui.dev/amiresponsive?url=https://ski-school-pro-2-4db020aae0bc.herokuapp.com)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## UX
 
-`python3 -m http.server`
+For the SKP design I had to consider the USER’S needs:
+-	Website to be simple,
+-	Easily fluid to get around the site,
+-	Keep their data secure,
+-	Option for the owner to have an administration section private only for the owner,
+-	Implement CRUD design features & where needed defensive programming.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### Colour Scheme
 
-`http_server`
+With the colour scheme I used a combination of soft greys and blues to enhance the feeling of the cool winter season.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Typography
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+I used the default Font from Bootstraps, as it stands out quite nicely. (Subject to change due time constrictions). I used the Font Awesome icons for the social media icons and altered the colours to reflect the colour scheme throughout the site. 
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
-To log into the Heroku toolbelt CLI:
+## User Stories
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Ski Instructor
 
----
+-	As a ski school instructor, I can be able to view my teaching schedule and see details of upcoming lessons, including student information and skill levels so that I am able to cater to my client.
 
-Happy coding!
+### Student
+
+-	As a ski school student, I can be able to book a lesson by providing my personal details and preferences so that so that I can get the lesson I need.
+-	As a ski school student, I can be able to browse available lessons and view details so that I can make informed decision.
+-	As a ski school student, I can be able to view my upcoming lessons and any relevant information, or updates related to them. Additionally, I want to have the ability to cancel my appointment if needed so that I can have some flexibility
+
+### Site Admin
+
+-	As a ski school administrator, I can be able to manage lesson availability, including adding new lessons, modifying existing ones, and cancelling lessons if necessary so that have a overview on what is going on in the ski school
+
+## Wireframes
+
+To follow best practice, wireframes were developed for desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Desktop Wireframes
+
+Home
+  - ![screenshot](documentation/wireframes/desktop-home.png)
+
