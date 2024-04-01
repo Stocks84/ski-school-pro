@@ -18,7 +18,7 @@ class UserRegistrationForm(UserCreationForm):
 class LessonForm(forms.ModelForm):
     class Meta:
         model = Lesson
-        fields = ['instructor', 'date', 'time', 'duration_hours', 'max_students']  # Add more fields as needed
+        fields = ['instructor', 'date', 'time', 'duration_hours', 'max_students']
 
 
 class InstructorForm(forms.ModelForm):

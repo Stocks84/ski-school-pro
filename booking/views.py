@@ -16,17 +16,19 @@ def home(request):
 
 @login_required
 def lesson_list(request):
-    # Retrieve all lessons from the database
+    """Retrieve all lessons from the database"""
     lessons = Lesson.objects.all()
-    # Pass the lessons to the template for rendering
     return render(request, 'booking/lesson_list.html', {'lessons': lessons})
 
-def instructor_list(request): 
-    instructors = Instructor.objects.all()  # Retrieve all instructors from the database
+def instructor_list(request):
+    """Retrieve all instructors from the database"""
+    instructors = Instructor.objects.all()
     return render(request, 'booking/instructor_list.html', {'instructors': instructors})
 
 @login_required
 def book_lesson(request, lesson_id=None):
+    """Requires users to be logged in, allows the user to submit booking information, 
+    saves the booking to the database, & displays a success message upon a successful booking."""
     lesson = None
     if lesson_id:
         lesson = get_object_or_404(Lesson, pk=lesson_id)
@@ -38,24 +40,28 @@ def book_lesson(request, lesson_id=None):
             booking.user = request.user
             booking.save()
             messages.success(request, 'Your lesson has been booked successfully!')
-            return redirect('home')  # Redirect to a success page
+            return redirect('home') 
     else:
         form = BookingForm(instance=lesson)
     return render(request, 'booking/booking_form.html', {'form': form})
 
 
 def register(request):
+    """Saves user information to the database, & provides feedback to the user upon
+    successful registration, also redirects to the homepage."""
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Congratulations! Your registration was successful. You can now log in.')
-            return redirect('home')  # Redirect to home page after successful registration
+            return redirect('home') 
     else:
         form = UserRegistrationForm()
     return render(request, 'booking/registration_form.html', {'form': form})
 
 def user_login(request):
+    """Authenticating users, & provides feedback to the user upon successful or unsuccessful login attempts,
+    redirects to home page on success."""
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -63,19 +69,20 @@ def user_login(request):
         if user is not None:
             login(request, user)
             messages.success(request, f'Welcome back, {username}!')
-            return redirect('home')  # Redirect to home page after successful login
+            return redirect('home') 
         else:
             messages.error(request, 'Invalid username or password.')
     return render(request, 'booking/login_form.html')
 
 @login_required
 def user_logout(request):
+    """Handles user logout by ending the user's session and redirecting them to the home page."""
     logout(request)
     return redirect('home')
 
 @login_required
 def instructor_profile(request):
-    # Check if the logged-in user is a ski instructor
+    """Check if the logged-in user is a ski instructor"""
     try:
         instructor = Instructor.objects.get(user=request.user)
     except Instructor.DoesNotExist:
@@ -95,7 +102,10 @@ def instructor_profile(request):
 
 @login_required
 def delete_instructor_profile(request):
-    # Check if the logged-in user is a ski instructor
+    """Deletes the instructor profile. Ensures that only authenticated users who are registered
+    instructors can delete their profiles. Provides feedback to the user upon successful deletion
+    & redirects to the home page. A user who is not an instructor tries to access page, they are 
+    notified that they cannot delete a profile they don't have."""
     try:
         instructor = Instructor.objects.get(user=request.user)
     except Instructor.DoesNotExist:
@@ -105,5 +115,5 @@ def delete_instructor_profile(request):
     if request.method == 'POST':
         instructor.delete()
         messages.success(request, 'Profile deleted successfully!')
-        return redirect('home')  # Redirect to home page after deletion
+        return redirect('home') 
     return render(request, 'booking/delete_instructor_profile.html')
