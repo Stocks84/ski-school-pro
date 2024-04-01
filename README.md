@@ -178,3 +178,32 @@ Home
 - [![AWS S3](https://img.shields.io/badge/AWS_S3-grey?logo=amazons3&logoColor=569A31)](https://aws.amazon.com/s3) used for online static file storage.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+
+
+## Database Design
+
+![screenshot](documentation/erd.png)
+
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://github.com/Stocks84/ski-school-pro/projects) served as an Agile tool for this project.
+It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+![screenshot](documentation/gh-projects.png)
+
+### GitHub Issues
+
+[GitHub Issues](https://github.com/Stocks84/ski-school-pro/issues) served as an another Agile tool.
+There, I used my own **User Story Template** to manage user stories.
+
+It also helped with milestone iterations on a weekly basis.
+
+- [Open Issues](https://github.com/Stocks84/ski-school-pro/issues) [![GitHub issues](https://img.shields.io/github/issues/Stocks84/ski-school-pro)](https://github.com/Stocks84/ski-school-pro/issues)
+
+   
+
+- [Closed Issues](https://github.com/Stocks84/ski-school-pro/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/Stocks84/ski-school-pro)](https://github.com/Stocks84/ski-school-pro/issues?q=is%3Aissue+is%3Aclosed)
