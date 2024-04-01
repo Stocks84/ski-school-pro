@@ -57,3 +57,93 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 Home
   - ![screenshot](documentation/wireframes/desktop-home.png)
 
+
+## Features
+
+### Existing Features
+
+- **Social Icons-#1**
+
+    - Once clicked on opens a new window for the user to visit SKP social media sites which improves interactivity and promotion.
+
+![screenshot](documentation/features/feature01.png)
+
+- **User Registration-#2**
+
+    - The user is allowed to register so that they can eventually be able to login and potentially book a lesson and access membership areas of the website.
+
+![screenshot](documentation/features/feature02.png)
+
+- **Registration Successful-#3**
+
+    - Gives the User acknowledgement that their registration was a success. Allows them to proceed to login.
+
+![screenshot](documentation/features/feature03.png)
+
+- **Restricted Access to Lesson or Booking Page-#4/5**
+
+    - If the User is not logged on that User can not view the lessons or Booking page and is invited to register and then login.
+
+![screenshot](documentation/features/feature04.png)
+![screenshot](documentation/features/feature05.png)
+
+
+- **Welcome Back-#6**
+
+    - The user is given a welcome back message to confirm the success of the login. Also for added clarity their user name is now in the navigation bar in the top right corner and a logout button has been introduced.
+
+![screenshot](documentation/features/feature06.png)
+
+- **Restricted access to the instructor Bio’s-#7**
+
+    - If a non-instructor manages to gain access to the instructor/profile page a message will appear on the redirected home page and ask them to book a lesson instead.
+
+![screenshot](documentation/features/feature07.png)
+
+- **Access to lesson list-#8**
+
+    - Now the user has access to the lesson list, and see what lessons are available to them and with instructor.
+
+![screenshot](documentation/features/feature08.png)
+
+- **Access to booking form-#9**
+
+    - The user can now select a lesson from the dropdown menu. Also, they are required to put their username to complete the booking.
+
+![screenshot](documentation/features/feature09.png)
+
+- **Booking confirmation-#10**
+
+    - Once a lesson is submitted the User is redirected to the home page with a message confirming their booking.
+
+![screenshot](documentation/features/feature10.png)
+- **Access to lesson list-#11**
+
+    - In the navbar in the Top right-hand corner there is a search ski instructor that will only display instructors. Once selected will take the user to the instructor bio.
+
+![screenshot](documentation/features/feature11.png)
+
+- **Access to booking form-#12**
+
+    - The website works on a mobile/tablet device and the navigation bar transforms into a drop-down menu for convenience.
+
+![screenshot](documentation/features/feature12.png)
+
+- **Instructor Profile-#13**
+
+    - The instructor can update their ‘bio’ or if they no longer want to be part of the ski school have the option of deleting their whole profile.
+
+![screenshot](documentation/features/feature13.png)
+
+- **Change Bio-#14**
+
+    - Once bio is updated a success message is supplied to confirm the changes. 
+
+![screenshot](documentation/features/feature14.png)
+
+- **Delete Bio-#15**
+
+    - The instructor can delete their whole profile as well but using defensive programming a message pops asking the instructor if they are sure they want to delete their profile.
+
+![screenshot](documentation/features/feature15.png)
+
