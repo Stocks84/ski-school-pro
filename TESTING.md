@@ -51,4 +51,31 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | ski_school | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Stocks84/ski-school-pro/main/ski_school/settings.py) | ![screenshot](documentation/validation/settings.png) | |
 | ski_school | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Stocks84/ski-school-pro/main/ski_school/urls.py) | ![screenshot](documentation/validation/ski_urls.png) | |
 
+## Browser Compatibility
 
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Home | About | Contact | etc | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | - | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | - | Works as expected |
+| Safari | ![screenshot](documentation/browsers/browser-safari-home.png) | - | Works as expected |
+
+## Responsiveness
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Home | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-home.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-home.png) | Works as expected |
+| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | Works as expected |
+
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
+| Instructors | ![screenshot](documentation/lighthouse/lighthouse-instructors-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-instructors-desktop.png) | Some minor warnings |
