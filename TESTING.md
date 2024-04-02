@@ -82,4 +82,23 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
+Defensive programming was manually tested with the below user acceptance testing:
 
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| All Pages | | | | | |
+| | Social Icons in the footer is expected to open a new window to the social media site when the user clicks on the icon | Tested the feature by clicking the icons | The feature behaved as expected. | Test concluded and passed | ![screenshot](documentation/testing/testing01.png) |
+| | Navigation bars is expected to have line appear underneath when the cursor hovers and then take the user to the designated page on the site when the user clicks on the page they want | Tested the feature by hovering the cursor and then clicking on the links | The feature worked as expected | Test concluded and passed | ![screenshot](documentation/testing/testing02.png) |
+| | Search bar is expected to have a list of instructors and once chosen click search to head to the bio page | Tested the feature by using the drop down menu and then clicking search | The feature worked as expected | Test concluded and passed | ![screenshot](documentation/testing/testing03.png) |
+| Lessons page & Booking page without login | | | | | |
+| | User login screen is expected to appear and restrict the user from accessing the page when the user tries to view the page without logging in | Tested the feature by trying to access the page without a logging in | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing04.png) |
+| Register page | | | | | |
+| | Register for login is expected to redirect to the home page with a success confirmation message when the user puts all the correct information into the fields | Tested the feature by doing registering the correct details | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing05.png) |
+| | If the required field is missing or not filled in correctly it is expected to come up with a message to fill or enter the correct information when the user does not fill the required fields properly | Tested the feature by entering the wrong data | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing06.png) |
+| Login page | | | | | |
+| | Login is expected to redirect to the home page with a welcome back message when the user logins correctly | Tested the feature by logging in as a student | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing07.png) |
+| Instructor profile page | | | | | |
+| | Restricted access for student is expected to redirect to the home page with a ‘you are not allowed access’ message when the user puts the correct url in| Tested the feature by putting the private url in, signed in as a student | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing08.png) |
+| | Gain access as Instructor & be able to edit or delete their profile by logging in with the correct instructor log in | Tested the feature by entering the correct instructor log in| The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing10.png) |
+| | Instructor allowed to edit their bio is expected to have a success message when the instructor saves the new edit | Tested the feature by saving the edited bio | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing11.png) |
+| | Delete profile is expected to have alert message pop up to confirm in the instructor want to delete the profile when they click the delete button | Tested the feature by putting the private url in, singed in as a student | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/testing/testing12.png) |
