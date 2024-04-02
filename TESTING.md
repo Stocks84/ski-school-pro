@@ -79,3 +79,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
 | Instructors | ![screenshot](documentation/lighthouse/lighthouse-instructors-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-instructors-desktop.png) | Some minor warnings |
+
+## Defensive Programming
+
+
